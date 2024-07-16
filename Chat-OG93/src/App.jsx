@@ -1,16 +1,15 @@
+import Response from "./components/Response"
 
 function App() {
 
   return (
-    <>
-      <div className='w-full mx-auto bg-slate-500'>
+      <div className='bg-slate-900 m-3'>
         <h1>Chat OG93</h1>
        <input
-       className='w-[500px]'
        type='text'
        placeholder='Ask Me anything...'/>
+       <Response/>
       </div>
-    </>
   )
 }
 
