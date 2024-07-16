@@ -2,10 +2,14 @@ import React from 'react'
 import axios from 'axios'
 import { useRef } from 'react'
 import { useState } from 'react'
+import Message from './Message'
+import iconAi from '../assets/AI-Profile.png'
+import iconUser from '../assets/User-Profile.png'
 
 const InputChat = () => {
     const searchRef = useRef()
     const [btnDisable, setBtnDisable] = useState(false)
+    const [answer, setAnswer] = useState(["Hi, Im AI, can I help you ?"])
 
     const  generateAnswer = async (e)=> {
         e.preventDefault()
@@ -18,14 +22,24 @@ const InputChat = () => {
                     { parts:[{text: searchRef.current.value}]}
             ]}
         })
-        console.log(response.data.candidates[0].content.parts[0].text)
+        var message = response.data.candidates[0].content.parts[0].text
+        setAnswer([...answer,message])
+        console.log(answer)
         setTimeout(() => {
             setBtnDisable(false);
             searchRef.current.value ="";
           }, "1000");
     }
   return (
-        <form className='flex justify-center items-center max-w-[800px] mx-auto' onSubmit={generateAnswer}>
+    <>
+    
+    <div className='relative bg-slate-400 rounded-t mx-auto max-w-[800px] min-h-[400px] p-2 '>
+        <div className='min-h-[300px]'>
+        <Message imgProfile={iconAi} message={answer}/>
+        <Message imgProfile={iconUser} message="Hi, Thank You"/>
+        </div>
+    </div>
+    <form className='flex justify-center items-center max-w-[800px] mx-auto' onSubmit={generateAnswer}>
         <input
         ref={searchRef}
         type='text'
@@ -37,6 +51,8 @@ const InputChat = () => {
         disabled={btnDisable}>
         Search</button>
         </form>
+    </>
+        
     
   )
 }

@@ -14,7 +14,6 @@ const ChatSection = () => {
         <div className='min-h-[300px]'>
         <Message imgProfile={iconAi} message={textMessage}/>
         <Message imgProfile={iconUser} message="Hi, Thank You"/>
-        {import.meta.env.API_GEMENI_KEY}
         </div>
     </div>
     <InputChat/>

@@ -1,6 +1,7 @@
 
 import ChatSection from './components/ChatSection'
 import Header from './components/Header'
+import InputChat from './components/InputChat'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <h1 className="text-3xl font-bold text-center my-5">
         OG93 ! Ask me
       </h1>
-      <ChatSection/>
+      <InputChat/>
       
     </div>
     </>
