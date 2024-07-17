@@ -6,6 +6,7 @@ import Message from './Message'
 import iconAi from '../assets/AI-Profile.png'
 import iconUser from '../assets/User-Profile.png'
 
+
 const InputChat = () => {
     const searchRef = useRef()
     const [btnDisable, setBtnDisable] = useState(false)
