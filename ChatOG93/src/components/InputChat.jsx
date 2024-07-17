@@ -9,7 +9,7 @@ import iconUser from '../assets/User-Profile.png'
 const InputChat = () => {
     const searchRef = useRef()
     const [btnDisable, setBtnDisable] = useState(false)
-    const [answer, setAnswer] = useState(["Hi, Im AI, can I help you ?"])
+    const [answer, setAnswer] = useState([])
 
     const  generateAnswer = async (e)=> {
         e.preventDefault()
@@ -35,8 +35,11 @@ const InputChat = () => {
     
     <div className='relative bg-slate-400 rounded-t mx-auto max-w-[800px] min-h-[400px] p-2 '>
         <div className='min-h-[300px]'>
-        <Message imgProfile={iconAi} message={answer}/>
-        <Message imgProfile={iconUser} message="Hi, Thank You"/>
+        {answer.map((answ, idx) =>
+            (<Message key={idx} imgProfile={iconAi} message={answ}/>)
+        )}
+        
+        {/* <Message imgProfile={iconUser} message="Hi, Thank You"/> */}
         </div>
     </div>
     <form className='flex justify-center items-center max-w-[800px] mx-auto' onSubmit={generateAnswer}>
