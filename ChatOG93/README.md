@@ -1,1 +1,1 @@
-<img width="939" alt="AI-OG93-Chat" src="https://github.com/user-attachments/assets/af2492ce-30e1-43e4-9058-bdb743b36b93">
+<img width="836" alt="AI" src="https://github.com/user-attachments/assets/ed7bcaad-d337-4525-9b8a-a36ed2cd2c1b">
