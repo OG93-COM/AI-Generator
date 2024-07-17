@@ -10,7 +10,12 @@ import iconUser from '../assets/User-Profile.png'
 const InputChat = () => {
     const searchRef = useRef()
     const [btnDisable, setBtnDisable] = useState(false)
-    const [answer, setAnswer] = useState([])
+    const [answer, setAnswer] = useState([
+        {
+            text:"Hello, How can I help You?",
+            isRobot:true
+        }
+    ])
 
     const  generateAnswer = async (e)=> {
         e.preventDefault()
