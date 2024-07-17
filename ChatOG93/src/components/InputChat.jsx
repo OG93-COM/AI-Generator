@@ -10,7 +10,6 @@ const InputChat = () => {
     const searchRef = useRef()
     const [btnDisable, setBtnDisable] = useState(false)
     const [answer, setAnswer] = useState([])
-    const [question, setQuestion] = useState([])
 
     const  generateAnswer = async (e)=> {
         e.preventDefault()
@@ -24,9 +23,18 @@ const InputChat = () => {
             ]}
         })
         var message = response.data.candidates[0].content.parts[0].text
-        setAnswer([...answer,message])
-        console.log(answer)
-        setQuestion([...question,searchRef.current.value])
+        setAnswer([
+            ...answer,
+            {
+                text:searchRef.current.value,
+                isRobot:false
+            },
+            {
+                text:message,
+                isRobot:true
+            },
+        ])
+
         setTimeout(() => {
             setBtnDisable(false);
             searchRef.current.value ="";
@@ -36,14 +44,10 @@ const InputChat = () => {
     <>
     <div className='relative bg-slate-400 rounded-t mx-auto md:max-w-[800px] min-h-[400px] p-2 '>
         <div className='min-h-[300px]'>
-        {/* {question.map((quest,idx) =>
-        (<Message key={idx} imgProfile={iconUser} message={quest}/>)
-        )} */}
 
         {answer.map((answ, idx) =>
-            (<Message key={idx} imgProfile={iconAi} message={answ}/>)
+            (<Message key={idx} imgProfile={answ.isRobot ? iconAi : iconUser} message={answ.text}/>)
         )}
-        
 
         </div>
     </div>
