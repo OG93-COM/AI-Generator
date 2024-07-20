@@ -40,7 +40,6 @@ const InputChat = () => {
                 isRobot:true
             },
         ])
-
         setTimeout(() => {
             setBtnDisable(false);
             searchRef.current.value ="";
