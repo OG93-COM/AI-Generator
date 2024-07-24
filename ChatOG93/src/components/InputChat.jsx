@@ -69,8 +69,6 @@ const InputChat = () => {
         Search</button>
         </form>
     </>
-        
-    
   )
 }
 
