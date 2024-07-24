@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown'
 
 const Message = ({imgProfile, message}) => {
     const messageText = useSelector(state => state.chatAi)
-    console.log(messageText)
   return (
     <div className='flex items-start gap-2 my-2  '>
         <img src={imgProfile} className='w-12 px-1 mb-2'/>
