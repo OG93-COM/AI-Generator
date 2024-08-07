@@ -1,7 +1,8 @@
-
-import ChatSection from './components/ChatSection'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import InputChat from './components/InputChat'
+import GenAI from './components/GenImg/GenAI'
+import TextAI from './components/TextAI'
+
 
 
 function App() {
@@ -10,13 +11,10 @@ function App() {
   return (
     <>
     <Header/>
-    <div className='bg-slate-800 min-h-screen min-w-full text-slate-100 p-2'>
-      <h1 className="text-3xl font-bold text-center my-5">
-        OG93 ! Ask me
-      </h1>
-      <InputChat/>
-      
-    </div>
+    <Routes>
+      <Route path='/' element={<TextAI/>}/>
+      <Route path='/GenAI-Img' element={<GenAI/>}/>
+    </Routes>
     </>
     
   )
