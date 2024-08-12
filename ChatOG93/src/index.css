@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color:#475468
+body {
+  background-color: #475468;
 }
-  
-
-  .appcanvas{
-    position: absolute;
-
-  }
+.appcanvas {
+  position: absolute;
+}

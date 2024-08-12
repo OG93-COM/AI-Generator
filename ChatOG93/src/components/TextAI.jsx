@@ -7,8 +7,7 @@ const TextAI = () => {
       <h1 className="text-2xl text-slate-300 font-bold text-center my-5">
         Chat AI System! Ask Me Here 👇
       </h1>
-      <InputChat/>
-      
+      <InputChat />
     </div>
   )
 }
