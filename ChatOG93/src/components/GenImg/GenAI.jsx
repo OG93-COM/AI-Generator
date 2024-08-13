@@ -26,7 +26,6 @@ const GenAI = () => {
           size: "1024x1024",
         }),
       });
-
       const data = await response.json();
       console.log(data);
 
