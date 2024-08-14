@@ -39,6 +39,7 @@ const GenAI = () => {
       setErrorMessage('An error occurred while generating the image.');
     }
   };
+  
 
   return (
     <div className='bg-slate-800 min-h-screen min-w-full text-slate-100 p-2 mx-auto'>
