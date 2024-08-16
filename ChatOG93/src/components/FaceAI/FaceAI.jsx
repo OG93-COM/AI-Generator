@@ -12,8 +12,6 @@ function FaceAI() {
 
     }, [])
 
-
-
     // OPEN YOU FACE WEBCAM
     const startVideo = () => {
         navigator.mediaDevices.getUserMedia({ video: true })
