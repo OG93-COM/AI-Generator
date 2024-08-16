@@ -1,6 +1,5 @@
 import InputChat from "./InputChat"
 
-
 const TextAI = () => {
   return (
     <div className='bg-slate-800 min-h-screen min-w-full text-slate-100 p-2'>
