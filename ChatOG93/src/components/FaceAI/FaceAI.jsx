@@ -22,8 +22,8 @@ function FaceAI() {
                 console.log(err)
             })
     }
-    // LOAD MODELS FROM FACE API
 
+    // LOAD MODELS FROM FACE API
     const loadModels = () => {
         Promise.all([
             // THIS FOR FACE DETECT AND LOAD FROM YOU PUBLIC/MODELS DIRECTORY
