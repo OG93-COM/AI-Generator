@@ -76,7 +76,6 @@ function FaceAI() {
             </div>
         </>
     )
-
 }
 
 export default FaceAI;
