@@ -13,6 +13,9 @@ const Header = () => {
       <Link to="/Face-AI">
         <div className='cursor-pointer hover:text-slate-300'>Face AI</div>
       </Link>
+      <Link to="/Recognition">
+        <div className='cursor-pointer hover:text-slate-300'>Speech Recognation</div>
+      </Link>
     </div>
   )
 }
